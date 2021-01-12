@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: car
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: cloud_user
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.80.131:3306/cloud_user?serverTimezone=UTC&characterEncoding=utf-8
+    username: root
+    password: 1qaz
+  flyway:
+    baseline-on-migrate: true
+
+mybatis:
+  type-aliases-package: com.nice.car.mybatis.entity
+  mapper-locations: classpath:mappers/**.xml
+
+
