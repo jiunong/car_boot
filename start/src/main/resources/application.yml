@@ -12,9 +12,13 @@ spring:
     password: 1qaz
   flyway:
     baseline-on-migrate: true
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  thymeleaf:
+    cache: false #页面不加载缓存
 
 mybatis:
   type-aliases-package: com.nice.car.mybatis.entity
   mapper-locations: classpath:mappers/**.xml
-
 
